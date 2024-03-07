@@ -1,0 +1,484 @@
+/*ESTILO GERAL*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #5e17eb;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #fff;
+    font-family: Georgia;
+    transition: .2s;
+}
+
+h2.titulo{
+    color: #fff;
+    font-size: 42px;
+    font-family: Georgia;
+    text-align: center;
+}
+h2.titulo span{
+    color: #5e17eb;
+}
+
+/* ESTILO DO CABEÇALHO */
+
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: rgb(54, 53, 53);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: #fff;
+    transform: scale(1.05);
+}
+
+header nav ul{ 
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+header .btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #5e17eb;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+
+}
+
+.btn-contato button:hover{
+    box-shadow: 0px 0px 8px #5e17eb;
+    transform: scale(1.05);
+}
+
+button{
+    width: 200px;
+    height: 60px;
+    border: 2px solid #5e17eb;
+    background-color: transparent;
+    border-radius: 10px;
+}
+#btn-menu{
+    display: none;
+}
+
+.linha{
+    width: 35px;
+    height: 3px;
+    background-color: #5e17eb;
+    display: block;
+    margin: 10px auto;
+    position: relative;
+    transform-origin: center;
+    transition: 0.2s;
+}
+
+#btn-menu.ativo{
+    border: 2px solid red;
+}
+
+#btn-menu.ativo .linha:nth-child(1){
+    transform: translateY(13px) rotate(-45deg);
+    background-color: red;
+}
+
+#btn-menu.ativo .linha:nth-child(3){
+    transform: translateY(-13px) rotate(45deg);
+    background-color: red;
+}
+
+#btn-menu.ativo .linha:nth-child(2){
+    width: 0;
+}
+/* ESTILO DO TOPO DO SITE */
+
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.topo-do-site h1{
+    color: #fff;
+    font-size: 42px;
+    font-family: Georgia;
+    line-height: 40px;
+}
+
+.topo-do-site h1 span{
+    color: #5e17eb;
+    font-size: 55px;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: #fff;
+    margin: 40px 0;
+    font-size: 19px;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 1s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 5%;
+    }
+    100%{
+        top: 10%;
+    }
+}
+
+/* ESTILO DOS CONHECIMENTOS */
+section.conhecimentos{
+    padding: 40px 4%;
+}
+
+section.conhecimentos .flex{
+    gap: 60px;
+}
+
+.conhecimentos .conhecimentos-box{
+    color: #fff;
+    padding: 45px;
+    border-radius: 25px;
+    margin-top: 45px;
+    transition: .2s;
+}
+
+.conhecimentos .conhecimentos-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px #5a5959;
+}
+
+.conhecimentos .conhecimentos-box i {
+    font-size: 80px;
+    color: #5e17eb;
+}
+
+.conhecimentos .conhecimentos-box h3{
+    font-size: 35px;
+}
+
+.conhecimentos .conhecimentos-box p{
+    font-size: 19px;
+    text-align: justify;
+}
+    
+/* ESTILO SOBRE */
+section.sobre{
+    padding: 90px 4%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre{
+    color: #fff;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span{ 
+    color: #5e17eb;
+    display: block;
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify;
+    font-size: 19px;
+}
+
+.sobre .txt-sobre .btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    background-color: #5e17eb;
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: .2s;
+}
+
+.btn-social button:hover{
+    box-shadow:0px 0px 8px #5e17eb;
+    transform: scale(1.05);
+}
+
+/* ESTILO PORTFÓLIO */
+.port-ii{
+    color: #fff;
+}
+.port-ii h3{
+    padding: 20px;
+}
+
+section.portfolio .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+section.interface .port-ii h3{
+    font-size: 120px;
+}
+
+.interface .btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    background-color: #5e17eb;
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: .2s;
+}
+
+.port-ii{
+   display: flex; 
+   justify-content: center; 
+   align-items: center; 
+   flex-flow: column;
+   position: relative;
+}
+
+/* PÁGINA DE CONTATO */
+section.formulario{
+    padding: 90px 4%;
+}
+
+p{
+    color: #fff;
+    font-size: 23px;
+    margin-top: 25px;
+    text-align: justify;
+}
+p a{
+    color: #5e17eb;
+}
+
+/* ESTILO DO RODAPÉ */
+
+footer{
+    padding: 60px 4%;
+    box-shadow: 0 0 40px 10px #5c5c5c6c;
+}
+
+footer .line-footer{
+    padding: 30px 0;
+    
+}
+.borda{
+    border-top: 2px solid #5e17eb;
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+footer .line-footer p i{
+    color: #5e17eb;
+    font-size: 25px;
+}
+footer .line-footer p a{
+    color: #fff;
+    text-align: left;
+}
+
+
+/* ESTILIZAÇÃO DO MENU-MOBILE */
+.menu-mobile{
+    background-color: #0000008f;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 187px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.menu-mobile ul li a{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 20px 30px;
+    font-size: 30px;
+}
+
+.menu-mobile ul li a:hover{
+    background-color: #2e2d2d;
+
+}
+
+
+
+/* RESPONSIVO */
+@media screen and (max-width: 1146px){
+
+    
+   /* CLASSES GERAIS */
+
+   .flex{
+        flex-direction: column;
+   }
+
+
+    /* CABEÇALHO */
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+
+    section.topo-do-site .flex{
+        gap: 40px;
+    }
+
+    .menu, .social{
+        display: none;
+    }
+
+     .interface .logo{
+        width: 100%;
+    }
+
+    /* TOPO DO SITE */
+
+    section.topo-do-site{
+        padding: 20px 8%;
+    }
+
+    .topo-do-site h1{
+        font-size: 34px;
+        text-align: center;
+    }
+
+    .topo-do-site .img-topo-site img{
+        width: 100% 40px;
+    }
+
+
+    /* MEUS CONHCECIMENTOS */
+    h2.titulo{
+        font-size: 29px;
+    }
+
+    section.conhecimentos{
+        padding: 40px 10%;
+    }
+
+    
+
+    /* ESTILO SOBRE */
+    .sobre .flex{
+        flex-direction: column-reverse;
+    }
+
+    .sobre .txt-sobre h2{
+        font-size: 34px;
+        text-align: center;
+    }
+
+    .btn-social{
+        text-align: center;
+        font-size: 8px;
+    }
+
+    .img-sobre img{
+        width: 100%;
+    }
+
+
+    /* ESTILO PORTFÓLIO */
+    .port-ii img{
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .port-ii h3{
+        padding: 20px;
+    }
+
+
+    /* ESTILO RODAPÉ */
+    footer .felx{
+        flex-direction: column;
+    }
+
+    footer .line-footer{
+        text-align: center;
+    }
+
+    .menu-mobile.abrir{
+        visibility: visible;
+        height: calc(100vh - 77px);
+    }
+
+    #btn-menu{
+        display: block;
+    }
+    
+}
